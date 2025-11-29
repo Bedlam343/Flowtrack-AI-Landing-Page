@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Database,
-  Share2,
-  FileJson,
-  Cpu,
-  GitCommit,
-  MessageSquare,
-  Layers,
-  ArrowRight,
-} from 'lucide-react';
+import { Database, Share2, Cpu } from 'lucide-react';
+
+const appearAnimationProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 },
+};
 
 const TechDeepDive = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -86,22 +83,31 @@ const TechDeepDive = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 md:text-center max-w-3xl mx-auto">
-          <h2 className="text-indigo-400 font-semibold tracking-wide uppercase text-sm mb-3">
+          <motion.h2
+            {...appearAnimationProps}
+            className="text-indigo-400 font-semibold tracking-wide uppercase text-sm mb-3"
+          >
             Under the Hood
-          </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </motion.h2>
+          <motion.h3
+            {...appearAnimationProps}
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
+          >
             Not magic. Just rigorous data engineering.
-          </h3>
-          <p className="text-gray-400 text-lg">
+          </motion.h3>
+          <motion.p {...appearAnimationProps} className="text-gray-400 text-lg">
             Most &quot;AI&quot; tools hallucinate. FlowTrack AI is built on a{' '}
             <span className="text-white font-medium">
               Graph RAG (Retrieval-Augmented Generation)
             </span>{' '}
             architecture that prioritizes factual accuracy and source citation.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <motion.div
+          {...appearAnimationProps}
+          className="grid lg:grid-cols-2 gap-12 items-start"
+        >
           {/* Left Column: Interactive Steps */}
           <div className="space-y-4">
             {steps.map((step, index) => (
@@ -218,7 +224,7 @@ const TechDeepDive = () => {
               </div>
             </motion.div> */}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

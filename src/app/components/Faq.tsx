@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 
+const appearAnimationProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 },
+};
+
 const FAQ = () => {
   // State to track which question is currently open.
   // Set to null initially (all closed), or use an index/ID.
@@ -45,15 +51,18 @@ const FAQ = () => {
           <div className="inline-flex items-center justify-center p-3 bg-indigo-50 rounded-xl mb-4">
             <HelpCircle className="h-6 w-6 text-indigo-600" />
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <motion.h2
+            {...appearAnimationProps}
+            className="text-3xl font-bold text-gray-900 mb-4"
+          >
             Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-gray-600">
+          </motion.h2>
+          <motion.p {...appearAnimationProps} className="text-lg text-gray-600">
             Everything you need to know about the product and billing.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="space-y-4">
+        <motion.div {...appearAnimationProps} className="space-y-4">
           {faqs.map((faq, i) => (
             <div
               key={i}
@@ -100,9 +109,12 @@ const FAQ = () => {
               </AnimatePresence>
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="mt-12 text-center bg-white rounded-2xl p-8 border border-gray-100">
+        <motion.div
+          {...appearAnimationProps}
+          className="mt-12 text-center bg-white rounded-2xl p-8 border border-gray-100"
+        >
           <p className="text-gray-900 font-medium mb-2">
             Still have questions?
           </p>
@@ -112,7 +124,7 @@ const FAQ = () => {
           <button className="text-indigo-600 font-bold hover:text-indigo-700 underline underline-offset-4">
             Contact Support
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

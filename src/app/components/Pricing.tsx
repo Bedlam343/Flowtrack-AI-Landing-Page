@@ -1,4 +1,11 @@
 import { Check } from 'lucide-react';
+import { motion } from 'motion/react';
+
+const appearAnimationProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 },
+};
 
 const Pricing = () => {
   const plans = [
@@ -50,14 +57,20 @@ const Pricing = () => {
     <section id="pricing" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <motion.h2
+            {...appearAnimationProps}
+            className="text-3xl font-bold text-gray-900 mb-4"
+          >
             Simple, transparent pricing
-          </h2>
-          <p className="text-lg text-gray-600">
+          </motion.h2>
+          <motion.p {...appearAnimationProps} className="text-lg text-gray-600">
             Start for free, scale when you need the intelligence.
-          </p>
+          </motion.p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <motion.div
+          {...appearAnimationProps}
+          className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        >
           {plans.map((plan, i) => (
             <div
               key={i}
@@ -115,7 +128,7 @@ const Pricing = () => {
               </button>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
