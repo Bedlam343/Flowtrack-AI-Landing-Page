@@ -49,7 +49,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600  mx-auto mb-10 leading-relaxed">
             Turn noisy activity from GitHub, Slack, and Linear into a clear
             daily briefing.
             <span className="block text-gray-900 font-medium mt-1">
