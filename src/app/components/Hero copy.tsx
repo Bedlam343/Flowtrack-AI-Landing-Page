@@ -155,8 +155,8 @@ const Hero = () => {
                             <span className="font-semibold text-gray-900">
                               API Blocker:
                             </span>{' '}
-                            Backend team has 12 mentions of "Auth Error" in
-                            Slack #dev-ops.
+                            Backend team has 12 mentions of &quot;Auth
+                            Error&quot; in Slack #dev-ops.
                           </p>
                         </div>
                       </div>

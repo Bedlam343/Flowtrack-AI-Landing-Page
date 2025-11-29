@@ -14,6 +14,7 @@ import {
   Activity,
 } from 'lucide-react';
 import Image from 'next/image';
+import StreamingText from './ui/StreamingText';
 
 // --- Helper: Typewriter Effect for Search Bar ---
 const SearchSimulator = () => {
@@ -28,29 +29,6 @@ const SearchSimulator = () => {
         className="inline-block w-0.5 h-3 bg-indigo-500 ml-0.5"
       />
     </span>
-  );
-};
-
-// --- Helper: LLM Streaming Text Effect ---
-const StreamingText = ({ text, delay = 0 }) => {
-  const words = text.split(' ');
-  return (
-    <motion.p className="text-sm text-gray-700 leading-relaxed">
-      {words.map((word, i) => (
-        <motion.span
-          key={i}
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.2,
-            delay: delay + i * 0.05, // Staggered delay for streaming effect
-            ease: 'easeOut',
-          }}
-        >
-          {word}{' '}
-        </motion.span>
-      ))}
-    </motion.p>
   );
 };
 
