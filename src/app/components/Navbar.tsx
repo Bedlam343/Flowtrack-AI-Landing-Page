@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <span className="flex items-center gap-2 text-xl font-bold text-indigo-900">
               <Activity className="h-6 w-6 text-indigo-600" />
-              FlowTrack AI
+              FlowPulse AI
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">

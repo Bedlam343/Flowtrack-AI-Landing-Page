@@ -91,7 +91,7 @@ const Hero = () => {
                 <div className="flex items-center gap-2">
                   <Activity className="h-5 w-5 text-indigo-600" />
                   <span className="font-bold text-gray-900 text-sm">
-                    FlowTrack AI
+                    FlowPulse AI
                   </span>
                 </div>
               </div>

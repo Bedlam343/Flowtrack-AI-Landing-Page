@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'FlowTrack AI',
+  title: 'FlowPulse AI',
   description: "Your engineering team's AI Chief of Staff",
 };
 

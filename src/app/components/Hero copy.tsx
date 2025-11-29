@@ -37,7 +37,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Stop relying on status meetings. FlowTrack AI turns activity from
+            Stop relying on status meetings. FlowPulse AI turns activity from
             GitHub, Slack, and Linear into a real-time execution pulse.
             <br />
             <span className="text-indigo-600 font-medium mt-2 block">

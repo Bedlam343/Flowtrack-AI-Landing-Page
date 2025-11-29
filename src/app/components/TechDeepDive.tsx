@@ -20,7 +20,7 @@ const TechDeepDive = () => {
       description:
         'We normalize disparate webhook events into a unified canonical schema.',
       detail:
-        'FlowTrack listens to GitHub `push` events, Linear `issue_update` webhooks, and Slack RTM streams. These are sanitized and stored in a time-series database, preserving timestamps and author metadata without storing sensitive code payloads.',
+        'FlowPulse listens to GitHub `push` events, Linear `issue_update` webhooks, and Slack RTM streams. These are sanitized and stored in a time-series database, preserving timestamps and author metadata without storing sensitive code payloads.',
       code: `{
   "event": "pr_merged",
   "source": "github",
@@ -97,7 +97,7 @@ const TechDeepDive = () => {
             Not magic. Just rigorous data engineering.
           </motion.h3>
           <motion.p {...appearAnimationProps} className="text-gray-400 text-lg">
-            Most &quot;AI&quot; tools hallucinate. FlowTrack AI is built on a{' '}
+            Most &quot;AI&quot; tools hallucinate. FlowPulse AI is built on a{' '}
             <span className="text-white font-medium">
               Graph RAG (Retrieval-Augmented Generation)
             </span>{' '}

@@ -24,7 +24,7 @@ const FAQ = () => {
       a: "Absolutely not. We do not record screens, log keystrokes, or take webcam photos. We strictly analyze work metadata (Git commits, public Slack channels, Linear tickets) to visualize workflow patterns, not police individual behavior. It is designed for 'Team Alignment,' not 'Surveillance.'",
     },
     {
-      q: 'Does FlowTrack AI store my actual source code?',
+      q: 'Does FlowPulse AI store my actual source code?',
       a: 'No. We never clone or store your repositories. Our integration analyzes metadata (commit timestamps, PR descriptions, file types changed) and then discards the raw payloads. Your IP remains on your servers.',
     },
     {
@@ -37,7 +37,7 @@ const FAQ = () => {
     },
     {
       q: 'Do I need to change how my team works?',
-      a: 'Zero changes required. No manual time-tracking, no special tagging, and no new habits. Keep using Jira/Linear/GitHub exactly as you do now. FlowTrack AI runs silently in the background.',
+      a: 'Zero changes required. No manual time-tracking, no special tagging, and no new habits. Keep using Jira/Linear/GitHub exactly as you do now. FlowPulse AI runs silently in the background.',
     },
     {
       q: 'What happens to my data if I cancel?',
