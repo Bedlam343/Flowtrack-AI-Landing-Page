@@ -4,4 +4,4 @@ This repository contains the source code for the FlowPulse AI landing page, buil
 
 ## Live Demo
 
-Visit the live demo of the FlowPulse AI landing page at: [https://flowpulse.ai](https://flowpulse.ai)
+Visit the live demo of the FlowPulse AI landing page at: [https://flowpulse-ai.vercel.app/](https://flowpulse-ai.vercel.app/)
